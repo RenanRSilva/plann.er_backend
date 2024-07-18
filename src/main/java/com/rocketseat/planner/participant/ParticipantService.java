@@ -32,4 +32,8 @@ public class ParticipantService {
     public void triggerConfirmationEmailToParticipants(UUID tripId){};
 
     public void triggerConfirmationEmailToParticipant(String email){};
+
+    public List<Participant> getAllParticipantsFromEvent(UUID tripId){
+        return this.repository.findByTripId(tripId);
+    }
 }
